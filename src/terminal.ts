@@ -43,7 +43,9 @@ function resolveLibPath(): string {
 
 	const basePaths = [
 		join(here, "rust-pty", "target", "release"),       // Direct path from project root
+		join(here, "..", "@xmorse", "bun-pty", "rust-pty", "target", "release"), // monorepo setups (scoped)
 		join(here, "..", "bun-pty", "rust-pty", "target", "release"), // monorepo setups
+		join(process.cwd(), "node_modules", "@xmorse", "bun-pty", "rust-pty", "target", "release"),
 		join(process.cwd(), "node_modules", "bun-pty", "rust-pty", "target", "release"),
 	];
 

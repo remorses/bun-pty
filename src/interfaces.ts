@@ -1,5 +1,3 @@
-import { Buffer } from "node:buffer";
-
 /**
  * Interface for disposable resources.
  */
